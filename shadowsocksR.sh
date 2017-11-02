@@ -222,8 +222,8 @@ pre_install(){
         hint="${ciphers[$i-1]}"
         echo -e "${green}${i}${plain}) ${hint}"
     done
-    read -p "Which cipher you'd select(Default: ${ciphers[12]}):" pick
-    [ -z "$pick" ] && pick=2
+    read -p "Which cipher you'd select(Default: ${ciphers[11]}):" pick
+    [ -z "$pick" ] && pick=12
     expr ${pick} + 1 &>/dev/null
     if [ $? -ne 0 ]; then
         echo -e "[${red}Error${plain}] Please enter a number"
